@@ -113,8 +113,8 @@ class HomePage extends StatelessWidget {
 
             SliverList(
               delegate: SliverChildListDelegate([
-                Feed(name: 'limse0rin'),
-                Feed(name: 'xin.o9_'),
+                Feed(name: 'limse0rin', likeCount: 10, commentCount: 5,),
+                Feed(name: 'xin.o9_', likeCount: 7, commentCount: 3,),
               ]),
             ),
           ], // Slivers

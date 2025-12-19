@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_clone_coding/home/home.dart';
+import 'package:instagram_clone_coding/search/search.dart';
 import 'package:material_symbols_icons/material_symbols_icons.dart';
 
 void main() {
@@ -30,7 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   final List<Widget> _screens = [
     HomePage(),
-    Text('data'),
+    SearchPage(),
     Text('data'),
     Text('data'),
     Text('data'),
