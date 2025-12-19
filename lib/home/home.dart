@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_clone_coding/home/components/feed/feed.dart';
+import 'package:instagram_clone_coding/home/components/feed/feed_header.dart';
 import 'package:material_symbols_icons/material_symbols_icons.dart';
+import 'package:instagram_clone_coding/home/components/story_item.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -78,7 +81,7 @@ class HomePage extends StatelessWidget {
                       padding: EdgeInsets.only(left: 10),
                       child: Stack(
                         children: [
-                          _storyItem('내 스토리'),
+                          StoryItem(name: '내 스토리'),
                           Positioned(
                             right: 17,
                             bottom: 27,
@@ -99,10 +102,10 @@ class HomePage extends StatelessWidget {
                         ],
                       ),
                     ),
-                    _storyItem('sxe1xo'),
-                    _storyItem('ss0_xa'),
-                    _storyItem('5.219_'),
-                    _storyItem('gracexilver'),
+                    StoryItem(name: 'sxe1xo'),
+                    StoryItem(name: 'ss0_xa'),
+                    StoryItem(name: '5.219_'),
+                    StoryItem(name: 'gracexilver'),
                   ],
                 ),
               ),
@@ -110,78 +113,8 @@ class HomePage extends StatelessWidget {
 
             SliverList(
               delegate: SliverChildListDelegate([
-                Column(
-                  children: [
-                    Container(
-                      width: 390,
-                      height: 50,
-                      // color: Colors.red,
-                      child: Row(
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.only(left: 10),
-                            child: Container(
-                              width: 35,
-                              height: 35,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                image: DecorationImage(
-                                  image: AssetImage(
-                                    'assets/images/ProfileImage.jpg',
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          Column(
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.only(right: 15, top: 5),
-                                child: Text(
-                                  'limse0rin',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.w600,
-                                    fontSize: 14,
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.only(left: 10),
-                                child: Text(
-                                  '회원님을 위한 추천',
-                                  style: TextStyle(fontSize: 12),
-                                ),
-                              ),
-                            ],
-                          ),
-                          Padding(
-                            padding: EdgeInsets.only(left: 200),
-                            child: Icon(Icons.more_horiz),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(width: 390, height: 390, color: Colors.black),
-                    Row(
-                      children: [
-                        IconButton(
-                          onPressed: () {},
-                          icon: Icon(Icons.favorite_border_rounded, size: 30,),
-                        ),
-                        Text('10'),
-                        IconButton(
-                            onPressed: () {},
-                            icon: Icon(Symbols.mode_comment, opticalSize: 40, size: 27)
-                        ),
-                        Text('5'),
-                        IconButton(
-                            onPressed: () {},
-                            icon: Icon(Symbols.send, size: 30, opticalSize: 40,)
-                        )
-                      ],
-                    ),
-                  ],
-                ), // Column - 사진 피드 1개
+                Feed(name: 'limse0rin'),
+                Feed(name: 'xin.o9_'),
               ]),
             ),
           ], // Slivers
@@ -189,31 +122,4 @@ class HomePage extends StatelessWidget {
       ), // CustomScrollView
     ); // Scaffold
   }
-}
-
-Widget _storyItem(String name) {
-  return Padding(
-    padding: EdgeInsets.only(top: 10, left: 10),
-    child: Column(
-      children: [
-        Padding(
-          padding: EdgeInsets.only(right: 20),
-          child: ClipRRect(
-            borderRadius: BorderRadiusGeometry.circular(150),
-            child: Image.asset(
-              'assets/images/ProfileImage.jpg',
-              width: 90,
-              height: 90,
-              fit: BoxFit.fitWidth,
-            ),
-          ),
-        ),
-        SizedBox(height: 6),
-        Padding(
-          padding: EdgeInsets.only(right: 20),
-          child: Text(name, style: TextStyle(color: Colors.black)),
-        ),
-      ],
-    ),
-  );
 }
