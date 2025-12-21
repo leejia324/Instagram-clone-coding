@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:instagram_clone_coding/home/home.dart';
 import 'package:instagram_clone_coding/search/search.dart';
 import 'package:material_symbols_icons/material_symbols_icons.dart';
+import 'package:instagram_clone_coding/my/my.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
     SearchPage(),
     Text('data'),
     Text('data'),
-    Text('data'),
+    MyPage(),
   ];
 
   @override
@@ -70,7 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
               label: "",
             ),
             BottomNavigationBarItem(
-              icon: Icon(Symbols.rectangle_add, size: 30),
+              icon: Icon(Symbols.add_box_rounded, size: 30),
               label: "",
             ),
             BottomNavigationBarItem(
@@ -78,7 +79,17 @@ class _MyHomePageState extends State<MyHomePage> {
               label: "",
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.person_pin, size: 30),
+              icon: Container(
+                width: 30,
+                height: 30,
+                decoration: BoxDecoration(
+                  border: _selectedIndex == 4
+                      ? Border.all(color: Colors.black, width: 1.5)
+                      : null,
+                  shape: BoxShape.circle,
+                  image: DecorationImage(image: AssetImage('assets/images/ProfileImage.jpg')),
+                ),
+              ),
               label: "",
             ),
           ],
