@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_clone_coding/home/components/feed/feed.dart';
-import 'package:instagram_clone_coding/home/components/feed/feed_header.dart';
 import 'package:material_symbols_icons/material_symbols_icons.dart';
-import 'package:instagram_clone_coding/home/components/story_item.dart';
+import 'package:instagram_clone_coding/home/components/story/story_item.dart';
+import 'package:instagram_clone_coding/home/components/story/active_story_item.dart';
+import 'package:instagram_clone_coding/home/components/story/close_friends_story_item.dart';
+import 'package:instagram_clone_coding/home/components/story/read_story_item.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -67,7 +69,6 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ],
-              // backgroundColor: Colors.green,
             ),
 
             SliverToBoxAdapter(
@@ -102,10 +103,13 @@ class HomePage extends StatelessWidget {
                         ],
                       ),
                     ),
-                    StoryItem(name: 'sxe1xo'),
-                    StoryItem(name: 'ss0_xa'),
-                    StoryItem(name: '5.219_'),
-                    StoryItem(name: 'gracexilver'),
+                    // StoryItem(name: 'sxe1xo'),
+                    CloseFriendsStoryItem(name: 'sxe1xo'),
+                    CloseFriendsStoryItem(name: 'limsuujin1'),
+                    ActiveStoryItem(name: 'ss0_xa'),
+                    ActiveStoryItem(name: '5.219_'),
+                    ReadStoryItem(name: 'gracexilver'),
+                    ReadStoryItem(name: 'taehheeyam'),
                   ],
                 ),
               ),
@@ -114,7 +118,8 @@ class HomePage extends StatelessWidget {
             SliverList(
               delegate: SliverChildListDelegate([
                 Feed(name: 'limse0rin', likeCount: 10, commentCount: 5,),
-                Feed(name: 'xin.o9_', likeCount: 7, commentCount: 3,),
+                Feed(name: '_yeo_.o', likeCount: 7, commentCount: 3,),
+                Feed(name: '1isianthus7', likeCount: 22, commentCount: 7)
               ]),
             ),
           ], // Slivers

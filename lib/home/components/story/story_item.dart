@@ -13,13 +13,14 @@ class StoryItem extends StatelessWidget {
         children: [
           Padding(
             padding: EdgeInsets.only(right: 20),
-            child: ClipRRect(
-              borderRadius: BorderRadiusGeometry.circular(150),
-              child: Image.asset(
-                'assets/images/ProfileImage.jpg',
-                width: 90,
-                height: 90,
-                fit: BoxFit.fitWidth,
+            child: Container(
+              width: 90,
+              height: 90,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                  image: AssetImage('assets/images/ProfileImage.jpg'),
+                ),
               ),
             ),
           ),
