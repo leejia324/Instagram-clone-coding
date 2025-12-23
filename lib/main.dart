@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: const MyHomePage(),
+      theme: ThemeData(fontFamily: 'Pretendard'),
     );
   }
 }
