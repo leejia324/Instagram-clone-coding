@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:material_symbols_icons/material_symbols_icons.dart';
 
 class SearchBox extends StatelessWidget {
   final double width;
@@ -15,6 +14,7 @@ class SearchBox extends StatelessWidget {
             height: 40,
             width: width,
             child: TextField(
+              cursorColor: Color(0xff6a7177),
               decoration: InputDecoration(
                 filled: true,
                 fillColor: Color(0xfff3f5f7),

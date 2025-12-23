@@ -21,13 +21,19 @@ class FeedFooter extends StatelessWidget {
           onPressed: () {},
           icon: Icon(Icons.favorite_border_rounded, size: 30),
         ),
-        Padding(padding: EdgeInsets.only(right: 5), child: Text('${likeCount}')),
+        Padding(
+          padding: EdgeInsets.only(right: 5),
+          child: Text('${likeCount}'),
+        ),
         IconButton(
           visualDensity: VisualDensity(horizontal: -4),
           onPressed: () {},
           icon: Icon(Symbols.mode_comment, opticalSize: 25, size: 27),
         ),
-        Padding(padding: EdgeInsets.only(right: 5), child: Text('${commentCount}')),
+        Padding(
+          padding: EdgeInsets.only(right: 5),
+          child: Text('${commentCount}'),
+        ),
         IconButton(
           visualDensity: VisualDensity(horizontal: -4),
           onPressed: () {},

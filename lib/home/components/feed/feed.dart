@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagram_clone_coding/home/components/feed/feed_footer.dart';
 import 'feed_header.dart';
-import 'package:material_symbols_icons/material_symbols_icons.dart';
-import 'feed_footer.dart';
 
 class Feed extends StatelessWidget {
   final String name;
