@@ -3,6 +3,7 @@ import 'package:instagram_clone_coding/home/home.dart';
 import 'package:instagram_clone_coding/search/search.dart';
 import 'package:material_symbols_icons/material_symbols_icons.dart';
 import 'package:instagram_clone_coding/my/my.dart';
+import 'create_post/create_post.dart';
 
 void main() {
   runApp(const MyApp());
@@ -51,6 +52,15 @@ class _MyHomePageState extends State<MyHomePage> {
         child: BottomNavigationBar(
           currentIndex: _selectedIndex,
           onTap: (int index) {
+            if (index == 2) {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => CreatePost()
+                  )
+              );
+              return;
+            }
             setState(() {
               _selectedIndex = index;
             });
